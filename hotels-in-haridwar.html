@@ -1,0 +1,767 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Classic Hotel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+
+  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gallery-wrap {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-img {
+      width: 100%;
+      padding-top: 70%;
+      /* Maintain aspect ratio */
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.4s ease;
+    }
+
+    .gallery-overlay span {
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    .gallery-wrap:hover .gallery-img {
+      transform: scale(1.05);
+    }
+
+    .gallery-wrap:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .hover-effect {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-effect:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      transition: all 0.3s ease;
+      background: transparent;
+      z-index: 10;
+    }
+
+    .site-header.scrolled {
+      background: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand,
+    .navbar .dropdown-menu a {
+      color: #fff !important;
+    }
+
+    .navbar .dropdown-menu {
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+    .navbar .dropdown-menu a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-brand img {
+      height: 70px;
+    }
+
+    .enquire-btn {
+      background-color: #ff9900;
+      color: #fff !important;
+      padding: 8px 20px;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .enquire-btn:hover {
+      background-color: #e68a00;
+      text-decoration: none;
+    }
+
+    .site-hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .site-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .site-hero-inner {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header" id="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid px-4 px-lg-5">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- Logo Left -->
+          <a class="navbar-brand" href="index.html">
+            <img src="images/Hotel-Logo-PNG-1024x223.png" alt="Logo" class="img-fluid rounded" style="height:70px;">
+          </a>
+
+          <!-- Toggler Right -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse justify-content-end mt-2 mt-lg-0" id="navbarNav">
+          <ul class="navbar-nav me-3">
+            <li class="nav-item px-2 px-lg-3"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item px-2 px-lg-3"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle px-2 px-lg-3" href="#" role="button"
+                data-bs-toggle="dropdown">Hotels</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item px-lg-2" href="room-at-classic-diplomat-delhi.html">Diplomat – Delhi</a>
+                </li>
+                <li><a class="dropdown-item px-lg-2" href="hotels-in-chamba.html">Hill Top-Chamba</a></li>
+                <li><a class="dropdown-item px-lg-2" href="hotels-in-haridwar.html">Residency-Haridwar</a></li>
+                <li><a class="dropdown-item px-lg-2" href="hotels-in-nainital.html">The Mall- Nainital</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle px-2 px-lg-3" href="#" role="button"
+                data-bs-toggle="dropdown">Rooms</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item px-lg-2" href="deluxe-room.html">New Delhi</a></li>
+                <li><a class="dropdown-item px-lg-2" href="suite.html">Chamba</a></li>
+                <li><a class="dropdown-item px-lg-2" href="family-room.html">Haridwar</a></li>
+                <li><a class="dropdown-item px-lg-2" href="family-room.html">Nainital</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item px-2 px-lg-3"><a class="nav-link" href="events.html">Events</a></li>
+            <li class="nav-item px-2 px-lg-3"><a class="nav-link" href="contact.html">Contact</a></li>
+
+          </ul>
+          <a href="enquire.html" class="enquire-btn">Enquire Now</a>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+  <!-- END head -->
+
+  <section class="site-hero inner-page overlay" style="background-image: url(images/room-bg.webp)"
+    data-stellar-background-ratio="0.5">
+    <div class="container">
+      <div class="row site-hero-inner justify-content-center align-items-center">
+        <div class="col-md-10 text-center" data-aos="fade">
+          <h1 class="heading mb-3">Rooms</h1>
+          <ul class="custom-breadcrumbs mb-4">
+            <li><a href="index.html">Home</a></li>
+            <li>&bullet;</li>
+            <li>Rooms</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <a class="mouse smoothscroll" href="#next">
+      <div class="mouse-icon">
+        <span class="mouse-wheel"></span>
+      </div>
+    </a>
+  </section>
+  <!-- END section -->
+
+  <section class="section pb-4">
+    <div class="container">
+
+      <div class="row check-availabilty" id="next">
+        <div class="block-32" data-aos="fade-up" data-aos-offset="-200">
+
+          <form action="#">
+            <div class="row">
+              <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                <label for="checkin_date" class="font-weight-bold text-black">Check In</label>
+                <div class="field-icon-wrap">
+                  <div class="icon"><span class="icon-calendar"></span></div>
+                  <input type="text" id="checkin_date" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                <label for="checkout_date" class="font-weight-bold text-black">Check Out</label>
+                <div class="field-icon-wrap">
+                  <div class="icon"><span class="icon-calendar"></span></div>
+                  <input type="text" id="checkout_date" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
+                <div class="row">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="adults" class="font-weight-bold text-black">Adults</label>
+                    <div class="field-icon-wrap">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="adults" class="form-control">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4+</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="children" class="font-weight-bold text-black">Children</label>
+                    <div class="field-icon-wrap">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="children" class="form-control">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4+</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 align-self-end">
+                <button class="btn btn-primary btn-block text-white">Check Availabilty</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up">
+          <a href="#" class="room">
+            <figure class="img-wrap">
+              <img src="images/room-img/deluxe-room.jpeg" alt="Free website template" class="img-fluid mb-3">
+            </figure>
+            <div class="p-3 text-center room-info">
+              <h2>Deluxe Premium Room</h2>
+              <span class="text-uppercase letter-spacing-1">Rs 5500* / per night</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up">
+          <a href="#" class="room">
+            <figure class="img-wrap">
+              <img src="images/room-img/suite-room.jpeg" alt="Free website template" class="img-fluid mb-3">
+            </figure>
+            <div class="p-3 text-center room-info">
+              <h2>Suite Room</h2>
+              <span class="text-uppercase letter-spacing-1">Rs 7000* / per night</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up">
+          <a href="#" class="room">
+            <figure class="img-wrap">
+              <img src="images/room-img/faimily-room.jpeg" alt="Free website template" class="img-fluid mb-3">
+            </figure>
+            <div class="p-3 text-center room-info">
+              <h2>Family Suite Room</h2>
+              <span class="text-uppercase letter-spacing-1">Rs 8000* / per night</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-7">
+          <h2 class="heading" data-aos="fade">Great Offers</h2>
+          <p data-aos="fade">Enjoy exclusive offers at Classic Diplomat, Mahipalpur—luxury stays just minutes from IGI
+            Airport!</p>
+        </div>
+      </div>
+
+      <div class="site-block-half d-block d-lg-flex bg-white" data-aos="fade" data-aos-delay="100">
+        <a href="#" class="image d-block bg-image-2"
+          style="background-image: url('images/room-img/deluxe-room.jpeg');"></a>
+        <div class="text">
+          <span class="d-block mb-4"><span class="display-4 text-primary">Rs 5500*</span> <span
+              class="text-uppercase letter-spacing-2">/ per night</span> </span>
+          <h2 class="mb-4">Deluxe Premium Room</h2>
+          <p>Relax in our Deluxe Premium Room—spacious comfort just steps from IGI Airport, New Delhi. Stay in style
+            with our Deluxe Premium Room at Classic Diplomat, Mahipalpur—where luxury meets convenience.</p>
+          <p><a href="#" class="btn btn-primary text-white">Check Availability</a></p>
+        </div>
+      </div>
+      <div class="site-block-half d-block d-lg-flex bg-white" data-aos="fade" data-aos-delay="200">
+        <a href="#" class="image d-block bg-image-2 order-2"
+          style="background-image: url('images/room-img/suite-room.jpeg');"></a>
+        <div class="text order-1">
+          <span class="d-block mb-4"><span class="display-4 text-primary">Rs 7000*</span> <span
+              class="text-uppercase letter-spacing-2">/ per night</span> </span>
+          <h2 class="mb-4">Suite Room</h2>
+          <p>Indulge in our Suite Room—elegant space and premium comfort near IGI Airport, New Delhi. Experience the
+            finest in hospitality with our Suite Room at Classic Diplomat, Mahipalpur.</p>
+          <p><a href="#" class="btn btn-primary text-white">Check Availability</a></p>
+        </div>
+      </div>
+      <div class="site-block-half d-block d-lg-flex bg-white" data-aos="fade" data-aos-delay="100">
+        <a href="#" class="image d-block bg-image-2"
+          style="background-image: url('images/room-img/faimily-room.jpeg');"></a>
+        <div class="text">
+          <span class="d-block mb-4"><span class="display-4 text-primary">Rs 8000*</span> <span
+              class="text-uppercase letter-spacing-2">/ per night</span> </span>
+          <h2 class="mb-4">Family Suite Room</h2>
+          <p>Make family travel comfortable with our spacious Family Suite Room near IGI Airport, New Delhi. Enjoy
+            quality time in our Family Suite Room—perfect for relaxing stays close to the airport.</p>
+          <p><a href="#" class="btn btn-primary text-white">Check Availability</a></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="section bg-image overlay" style="background-image: url('images/hero_3.jpg');">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-7">
+          <h2 class="heading text-white" data-aos="fade">FACILITIES AND SERVICES</h2>
+        </div>
+      </div>
+      <div class="food-menu-tabs" data-aos="fade">
+        <!--  <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active letter-spacing-2" id="mains-tab" data-toggle="tab" href="#mains" role="tab"
+              aria-controls="mains" aria-selected="true">Mains</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link letter-spacing-2" id="desserts-tab" data-toggle="tab" href="#desserts" role="tab"
+              aria-controls="desserts" aria-selected="false">Desserts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link letter-spacing-2" id="drinks-tab" data-toggle="tab" href="#drinks" role="tab"
+              aria-controls="drinks" aria-selected="false">Drinks</a>
+          </li>
+        </ul> -->
+        <div class="tab-content py-5" id="myTabContent">
+
+
+          <div class="tab-pane fade show active text-left" id="mains" role="tabpanel" aria-labelledby="mains-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+
+                  <h3 class="text-white"><a href="#" class="text-white">Tea Coffee Makers</a></h3>
+                  <p class="text-white text-opacity-7">Enjoy freshly brewed tea or coffee in the comfort of your room.
+                    Complimentary tea and coffee makers are available 24x7.</p>
+                </div>
+                <div class="food-menu mb-5">
+
+                  <h3 class="text-white"><a href="#" class="text-white"> Hair Dryer LED TV Wi-fi Connectivity</a></h3>
+                  <p class="text-white text-opacity-7">Stay connected with high-speed Wi-Fi and enjoy entertainment on
+                    the LED TV. Hair dryers are provided in all rooms for your convenience.</p>
+                </div>
+                <div class="food-menu mb-5">
+
+                  <h3 class="text-white"><a href="#" class="text-white">Hot & Cold Water Supply Valet Parking</a></h3>
+                  <p class="text-white text-opacity-7">Round-the-clock hot and cold water supply ensures a refreshing
+                    stay. Hassle-free valet parking is available for all guests.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+
+                  <h3 class="text-white"><a href="#" class="text-white">100% Power back-up Doctor on call</a></h3>
+                  <p class="text-white text-opacity-7">Our hotel provides 100% power backup for uninterrupted comfort.
+                    Emergency medical assistance is available through our doctor on call service.</p>
+                </div>
+                <div class="food-menu mb-5">
+
+                  <h3 class="text-white"><a href="#" class="text-white"> Sheving & Makeup Mirror 24x7 In Room Dining</a>
+                  </h3>
+                  <p class="text-white text-opacity-7">Every bathroom is equipped with a shaving and makeup mirror for
+                    your grooming needs. Enjoy delicious meals anytime with our 24x7 in-room dining service.</p>
+                </div>
+                <div class="food-menu mb-5">
+
+                  <h3 class="text-white"><a href="#" class="text-white">Travel Desk</a></h3>
+                  <p class="text-white text-opacity-7">Our dedicated travel desk assists with bookings, sightseeing, and
+                    transportation. Make your Delhi experience seamless and memorable.</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div> <!-- .tab-pane -->
+
+          <div class="tab-pane fade text-left" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+                  <span class="d-block text-primary h4 mb-3">$11.00</span>
+                  <h3 class="text-white"><a href="#" class="text-white">Banana Split</a></h3>
+                  <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <span class="d-block text-primary h4 mb-3">$72.00</span>
+                  <h3 class="text-white"><a href="#" class="text-white">Sticky Toffee Pudding</a></h3>
+                  <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <span class="d-block text-primary h4 mb-3">$26.00</span>
+                  <h3 class="text-white"><a href="#" class="text-white">Pecan</a></h3>
+                  <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+                  <span class="d-block text-primary h4 mb-3">$42.00</span>
+                  <h3 class="text-white"><a href="#" class="text-white">Apple Strudel</a></h3>
+                  <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <span class="d-block text-primary h4 mb-3">$7.35</span>
+                  <h3 class="text-white"><a href="#" class="text-white">Pancakes</a></h3>
+                  <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <span class="d-block text-primary h4 mb-3">$22.00</span>
+                  <h3 class="text-white"><a href="#" class="text-white">Ice Cream Sundae</a></h3>
+                  <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .tab-pane -->
+          <div class="tab-pane fade text-left" id="drinks" role="tabpanel" aria-labelledby="drinks-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+                  <span class="d-block text-primary h4 mb-3">$32.00</span>
+                  <h3 class="text-white"><a href="#" class="text-white">Spring Water</a></h3>
+                  <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <span class="d-block text-primary h4 mb-3">$14.00</span>
+                  <h3 class="text-white"><a href="#" class="text-white">Coke, Diet Coke, Coke Zero</a></h3>
+                  <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <span class="d-block text-primary h4 mb-3">$93.00</span>
+                  <h3 class="text-white"><a href="#" class="text-white">Orange Fanta</a></h3>
+                  <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+                  <span class="d-block text-primary h4 mb-3">$18.00</span>
+                  <h3 class="text-white"><a href="#" class="text-white">Lemonade, Lemon Squash</a></h3>
+                  <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <span class="d-block text-primary h4 mb-3">$38.35</span>
+                  <h3 class="text-white"><a href="#" class="text-white">Sparkling Mineral Water</a></h3>
+                  <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <span class="d-block text-primary h4 mb-3">$69.00</span>
+                  <h3 class="text-white"><a href="#" class="text-white">Lemon, Lime &amp; Bitters</a></h3>
+                  <p class="text-white text-opacity-7">Far far away, behind the word mountains, far from the countries
+                    Vokalia and Consonantia, there live the blind texts.</p>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .tab-pane -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-7">
+          <h2 class="heading" data-aos="fade">Gallery</h2>
+          <p data-aos="fade">Explore moments from Classic Diplomat—spacious rooms, elegant spaces, and unforgettable
+            stays.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Gallery Item 1 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in">
+          <a href="images/gallery/slider-1.jpg" data-fancybox="gallery" class="gallery-wrap">
+            <div class="gallery-img" style="background-image: url('images/gallery/slider-1.jpg');"></div>
+            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+          </a>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <a href="images/gallery/slider-2.jpg" data-fancybox="gallery" class="gallery-wrap">
+            <div class="gallery-img" style="background-image: url('images/gallery/slider-2.jpg');"></div>
+            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+          </a>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <a href="images/gallery/slider-3.jpg" data-fancybox="gallery" class="gallery-wrap">
+            <div class="gallery-img" style="background-image: url('images/gallery/slider-3.jpg');"></div>
+            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+          </a>
+        </div>
+
+        <!-- Gallery Item 4 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in">
+          <a href="images/gallery/slider-3.jpg" data-fancybox="gallery" class="gallery-wrap">
+            <div class="gallery-img" style="background-image: url('images/gallery/slider-3.jpg');"></div>
+            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+          </a>
+        </div>
+
+        <!-- Gallery Item 5 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <a href="images/gallery/slider-2.jpg" data-fancybox="gallery" class="gallery-wrap">
+            <div class="gallery-img" style="background-image: url('images/gallery/slider-2.jpg');"></div>
+            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+          </a>
+        </div>
+
+        <!-- Gallery Item 6 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <a href="images/gallery/slider-1.jpg" data-fancybox="gallery" class="gallery-wrap">
+            <div class="gallery-img" style="background-image: url('images/gallery/slider-1.jpg');"></div>
+            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-image overlay" style="background-image: url('images/hero_4.jpg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
+          <h2 class="text-white font-weight-bold">A Best Place To Stay. Reserve Now!</h2>
+        </div>
+        <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
+          <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section footer-section">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-3 mb-5">
+          <ul class="list-unstyled link">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Rooms</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-5">
+          <ul class="list-unstyled link">
+            <li><a href="#">The Rooms &amp; Suites</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Restaurant</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-5 pr-md-5 contact-info">
+          <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
+          <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span>
+              Corp Office: A 4, NH 8, Mahipalpur,
+              New Delhi-110037
+              sales@classichotelsindia.com</span></p>
+          <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span>
+              8527090276, 8527055445, 8527090204</span></p>
+          <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span>
+              sales@classichotelsindia.com</span></p>
+        </div>
+        <div class="col-md-3 mb-5">
+          <p>Sign up for our newsletter</p>
+          <form action="#" class="footer-newsletter">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email...">
+              <button type="submit" class="btn"><span class="fa fa-paper-plane"></span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <p class="col-md-6 text-left">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved |Classic Hotel <i
+            class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+
+        <p class="col-md-6 text-right social">
+          <a href="#"><span class="fa fa-tripadvisor"></span></a>
+          <a href="#"><span class="fa fa-facebook"></span></a>
+          <a href="#"><span class="fa fa-twitter"></span></a>
+          <a href="#"><span class="fa fa-linkedin"></span></a>
+          <a href="#"><span class="fa fa-vimeo"></span></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script>
+    window.addEventListener('scroll', function () {
+      var logo = document.getElementById('logo');
+
+      if (window.scrollY > 50) {
+        logo.classList.add('logo-black');
+      } else {
+        logo.classList.remove('logo-black');
+      }
+    });
+  </script>
+  <script>
+    window.addEventListener('scroll', function () {
+      var header = document.querySelector('.js-site-header');
+      var logo = document.querySelector('.site-logo img');
+
+      if (window.scrollY > 50) {
+        // Change logo to black
+        logo.src = 'images/classic-hotel-black.png';
+      } else {
+        // Change back to original white logo
+        logo.src = 'images/Hotel-Logo-PNG-1024x223.png';
+      }
+    });
+  </script>
+  <script src="js/main.js"></script>
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('site-header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+  <script>
+    window.addEventListener('scroll', function () {
+      var header = document.querySelector('.js-site-header');
+      var logo = document.querySelector('.site-logo img');
+
+      if (window.scrollY > 50) {
+        // Change logo to black
+        logo.src = 'images/classic-hotel-black.png';
+      } else {
+        // Change back to original white logo
+        logo.src = 'images/Hotel-Logo-PNG-1024x223.png';
+      }
+    });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
