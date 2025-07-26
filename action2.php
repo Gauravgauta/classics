@@ -8,12 +8,14 @@ if(isset($_POST['register']))
     $checkout_date = $_POST['checkout_date'];
     $adults = $_POST['adults'];
     $children = $_POST['children'];
+    $children = $_POST['Arrival_time'];
+    $children = $_POST['Need_airport_pickup'];
     $message = $_POST['message'];
 
     // Insert data into the database
-    $con = mysqli_connect("localhost","sgtuniversityac_classichotelsind","Chandu@12345","sgtuniversityac_classichotel");
-    $query = "INSERT INTO booking (email, name, phone, checkin_date, checkout_date, adults, children, message) 
-              VALUES ('$email', '$name', '$phone', '$checkin_date', '$checkout_date', '$adults', '$children', '$message')";
+    $con = mysqli_connect("localhost","classic_db","Chandu@12345","sgtuniversityac_classichotel");
+    $query = "INSERT INTO booking (email, name, phone, checkin_date, checkout_date, adults, children, Arrival_time, Need_airport_pickup, message) 
+              VALUES ('$email', '$name', '$phone', '$checkin_date', '$checkout_date', '$adults', '$children', '$Arrival_time' '$Need_airport_pickup' '$message')";
     $result = mysqli_query($con, $query);
 
     if($result)
@@ -31,6 +33,8 @@ if(isset($_POST['register']))
         $email_message .= "Check-out Date: $checkout_date\n";
         $email_message .= "Adults: $adults\n";
         $email_message .= "Children: $children\n";
+        $email_message .= "Arrival_time: $Arrival_time\n";
+        $email_message .= "Need_airport_pickup: $Need_airport_pickup\n";
         $email_message .= "Message: $message\n";
 
         // Use PHPMailer library to send emails

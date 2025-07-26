@@ -22,81 +22,61 @@
 
   <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <!-- Theme Style -->
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .gallery-wrap {
+    .swiper-slide {
       position: relative;
-      display: block;
       overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
     }
 
     .gallery-img {
-      width: 100%;
-      padding-top: 70%;
-      /* Maintain aspect ratio */
+      height: 250px;
       background-size: cover;
       background-position: center;
-      transition: transform 0.4s ease;
+      transition: transform 0.3s ease;
+      border-radius: 15px;
+    }
+
+    .swiper-slide:hover .gallery-img {
+      transform: scale(1.05);
     }
 
     .gallery-overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       background: rgba(0, 0, 0, 0.4);
-      opacity: 0;
       display: flex;
-      align-items: center;
       justify-content: center;
-      transition: opacity 0.4s ease;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      opacity: 0;
+      transition: 0.3s ease;
+      border-radius: 15px;
     }
 
-    .gallery-overlay span {
-      font-size: 2rem;
-      color: #fff;
-    }
-
-    .gallery-wrap:hover .gallery-img {
-      transform: scale(1.05);
-    }
-
-    .gallery-wrap:hover .gallery-overlay {
+    .swiper-slide:hover .gallery-overlay {
       opacity: 1;
     }
 
-    .hover-effect {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .text-center {
+      text-align: center;
     }
 
-    .hover-effect:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    .mb-5 {
+      margin-bottom: 3rem;
     }
 
-    .facility-img {
-      width: 70px;
-      height: 70px;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-    }
-
-    .facility-box:hover .facility-img {
-      transform: scale(1.1);
-    }
-
-    .facility-box {
-      transition: all 0.3s ease;
-    }
-
-    .facility-box:hover {
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      background: #fff;
+    .px-3 {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   </style>
   <style>
@@ -104,6 +84,10 @@
     html {
       margin: 0;
       padding: 0;
+    }
+
+    .img-wrap img {
+      border-radius: 10px;
     }
 
     .site-header {
@@ -329,8 +313,8 @@
 
   <section class="section">
     <div class="container">
+      <div class="row justify-content-center"> <!-- Added justify-content-center here -->
 
-      <div class="row">
         <div class="col-md-6 col-lg-4 mb-5" data-aos="fade-up">
           <a href="#" class="room">
             <figure class="img-wrap">
@@ -354,6 +338,7 @@
             </div>
           </a>
         </div>
+
       </div>
     </div>
   </section>
@@ -378,7 +363,7 @@
           <h2 class="mb-4">Deluxe Room</h2>
           <p>Relax in our Deluxe Premium Room—spacious comfort just steps from IGI Airport, New Delhi. Stay in style
             with our Deluxe Premium Room at Classic Diplomat, Mahipalpur—where luxury meets convenience.</p>
-          <p><a href="#" class="btn btn-primary text-white">Check Availability</a></p>
+          <p><a href="#" class="btn btn-primary text-white">Enquire Now</a></p>
         </div>
       </div>
       <div class="site-block-half d-block d-lg-flex bg-white" data-aos="fade" data-aos-delay="200">
@@ -390,7 +375,7 @@
           <h2 class="mb-4">Premium Room</h2>
           <p>Indulge in our Suite Room—elegant space and premium comfort near IGI Airport, New Delhi. Experience the
             finest in hospitality with our Suite Room at Classic Diplomat, Mahipalpur.</p>
-          <p><a href="#" class="btn btn-primary text-white">Check Availability</a></p>
+          <p><a href="#" class="btn btn-primary text-white">Enquire Now</a></p>
         </div>
       </div>
     </div>
@@ -568,72 +553,87 @@
     </div>
   </section>
 
+  <section class="bg-light" style="padding: 60px 0;">
+    <div class="container text-center mb-5">
+      <h2 class="heading">Gallery</h2>
+      <p>Step into the charm of Classic Hill Top Resort, Chamba.
+        Witness breathtaking landscapes, elegant interiors, and serene moments.
+        Each photo captures the timeless beauty and hospitality of your perfect getaway.</p>
+    </div>
 
+    <div class="swiper mySwiper px-3">
+      <div class="swiper-wrapper">
 
-
-  <section class="section bg-light">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-md-7">
-          <h2 class="heading" data-aos="fade">Gallery</h2>
-          <p data-aos="fade">Explore moments from Classic Diplomat—spacious rooms, elegant spaces, and unforgettable
-            stays.</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <!-- Gallery Item 1 -->
-        <div class="col-md-4 mb-4" data-aos="zoom-in">
-          <a href="images/gallery/slider-1.jpg" data-fancybox="gallery" class="gallery-wrap">
-            <div class="gallery-img" style="background-image: url('images/gallery/slider-1.jpg');"></div>
-            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <a href="images/gallery/chamba-gallery-1.jpeg" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/chamba-gallery-1.jpeg');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
           </a>
         </div>
 
-        <!-- Gallery Item 2 -->
-        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-          <a href="images/gallery/slider-2.jpg" data-fancybox="gallery" class="gallery-wrap">
-            <div class="gallery-img" style="background-image: url('images/gallery/slider-2.jpg');"></div>
-            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <a href="images/gallery/chamba-gallery-2.jpeg" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/chamba-gallery-2.jpeg');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
           </a>
         </div>
 
-        <!-- Gallery Item 3 -->
-        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-          <a href="images/gallery/slider-3.jpg" data-fancybox="gallery" class="gallery-wrap">
-            <div class="gallery-img" style="background-image: url('images/gallery/slider-3.jpg');"></div>
-            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <a href="images/gallery/chamba-gallery-3.jpeg" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/chamba-gallery-3.jpeg');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
           </a>
         </div>
 
-        <!-- Gallery Item 4 -->
-        <div class="col-md-4 mb-4" data-aos="zoom-in">
-          <a href="images/gallery/slider-3.jpg" data-fancybox="gallery" class="gallery-wrap">
-            <div class="gallery-img" style="background-image: url('images/gallery/slider-3.jpg');"></div>
-            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <a href="images/gallery/chamba-gallery-4.jpeg" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/chamba-gallery-4.jpeg');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
           </a>
         </div>
 
-        <!-- Gallery Item 5 -->
-        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-          <a href="images/gallery/slider-2.jpg" data-fancybox="gallery" class="gallery-wrap">
-            <div class="gallery-img" style="background-image: url('images/gallery/slider-2.jpg');"></div>
-            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <a href="images/gallery/chamba-gallery-5.jpeg" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/chamba-gallery-5.jpeg');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
           </a>
         </div>
 
-        <!-- Gallery Item 6 -->
-        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-          <a href="images/gallery/slider-1.jpg" data-fancybox="gallery" class="gallery-wrap">
-            <div class="gallery-img" style="background-image: url('images/gallery/slider-1.jpg');"></div>
-            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <a href="images/gallery/chamba-gallery-6.jpeg" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/chamba-gallery-6.jpeg');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
           </a>
         </div>
+        <div class="swiper-slide">
+          <a href="images/gallery/chamba-gallery-7.jpeg" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/chamba-gallery-7.jpeg');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="images/gallery/chamba-gallery-8.jpeg" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/chamba-gallery-8.jpeg');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+        </div>
+
+
+
       </div>
     </div>
   </section>
 
-  <section class="section bg-image overlay" style="background-image: url('images/hero_4.jpg');">
+
+
+
+  <section class="section bg-image overlay" style="background-image: url('images/chamba-footer.jpeg');">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
@@ -717,33 +717,6 @@
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
   <script>
-    var swiper = new Swiper('.facilitySwiper', {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      slidesPerView: 1,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-        },
-        992: {
-          slidesPerView: 3,
-        },
-        1200: {
-          slidesPerView: 4,
-        }
-      }
-    });
-  </script>
-
-  <script>
     window.addEventListener('scroll', function () {
       var logo = document.getElementById('logo');
 
@@ -789,6 +762,26 @@
       } else {
         // Change back to original white logo
         logo.src = 'images/Hotel-Logo-PNG-1024x223.png';
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+      },
+      breakpoints: {
+        576: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        992: { slidesPerView: 4 }
       }
     });
   </script>
