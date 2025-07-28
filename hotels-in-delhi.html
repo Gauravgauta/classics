@@ -22,61 +22,61 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
   <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <!-- Theme Style -->
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .gallery-wrap {
+    .swiper-slide {
       position: relative;
-      display: block;
       overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
     }
 
     .gallery-img {
-      width: 100%;
-      padding-top: 70%;
-      /* Maintain aspect ratio */
+      height: 250px;
       background-size: cover;
       background-position: center;
-      transition: transform 0.4s ease;
+      transition: transform 0.3s ease;
+      border-radius: 15px;
+    }
+
+    .swiper-slide:hover .gallery-img {
+      transform: scale(1.05);
     }
 
     .gallery-overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       background: rgba(0, 0, 0, 0.4);
-      opacity: 0;
       display: flex;
-      align-items: center;
       justify-content: center;
-      transition: opacity 0.4s ease;
+      align-items: center;
+      color: white;
+      font-size: 24px;
+      opacity: 0;
+      transition: 0.3s ease;
+      border-radius: 15px;
     }
 
-    .gallery-overlay span {
-      font-size: 2rem;
-      color: #fff;
-    }
-
-    .gallery-wrap:hover .gallery-img {
-      transform: scale(1.05);
-    }
-
-    .gallery-wrap:hover .gallery-overlay {
+    .swiper-slide:hover .gallery-overlay {
       opacity: 1;
     }
 
-    .hover-effect {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .text-center {
+      text-align: center;
     }
 
-    .hover-effect:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    .mb-5 {
+      margin-bottom: 3rem;
+    }
+
+    .px-3 {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
     .img-wrap img {
@@ -589,62 +589,77 @@
     </div>
   </section>
 
-  <section class="section bg-light">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-md-7">
-          <h2 class="heading" data-aos="fade">Gallery</h2>
-          <p data-aos="fade">Explore moments from Classic Diplomat—spacious rooms, elegant spaces, and unforgettable
-            stays.</p>
-        </div>
-      </div>
+  <section class="bg-light" style="padding: 60px 0;">
+    <div class="container text-center mb-5">
+      <h2 class="heading">Gallery</h2>
+      <p>Step into the charm of Classic Hill Top Resort, Chamba.
+        Witness breathtaking landscapes, elegant interiors, and serene moments.
+        Each photo captures the timeless beauty and hospitality of your perfect getaway.</p>
+    </div>
 
-      <div class="row">
-        <!-- Gallery Item 1 -->
-        <div class="col-md-4 mb-4" data-aos="zoom-in">
-          <a href="images/gallery/slider-1.jpg" data-fancybox="gallery" class="gallery-wrap">
-            <div class="gallery-img" style="background-image: url('images/gallery/slider-1.jpg');"></div>
-            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+    <div class="swiper mySwiper px-3">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <a href="images/gallery/delhi-gallery-1.JPG" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/delhi-gallery-1.JPG');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <a href="images/gallery/delhi-gallery-2.JPG" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/delhi-gallery-2.JPG');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
           </a>
         </div>
 
-        <!-- Gallery Item 2 -->
-        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-          <a href="images/gallery/slider-2.jpg" data-fancybox="gallery" class="gallery-wrap">
-            <div class="gallery-img" style="background-image: url('images/gallery/slider-2.jpg');"></div>
-            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <a href="images/gallery/delhi-gallery-3.JPG" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/delhi-gallery-3.JPG');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+        </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <a href="images/gallery/delhi-gallery-4.JPG" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/delhi-gallery-4.JPG');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
           </a>
         </div>
 
-        <!-- Gallery Item 3 -->
-        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-          <a href="images/gallery/slider-3.jpg" data-fancybox="gallery" class="gallery-wrap">
-            <div class="gallery-img" style="background-image: url('images/gallery/slider-3.jpg');"></div>
-            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <a href="images/gallery/delhi-gallery-5.JPG" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/delhi-gallery-5.JPG');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
           </a>
         </div>
-
-        <!-- Gallery Item 4 -->
-        <div class="col-md-4 mb-4" data-aos="zoom-in">
-          <a href="images/gallery/slider-3.jpg" data-fancybox="gallery" class="gallery-wrap">
-            <div class="gallery-img" style="background-image: url('images/gallery/slider-3.jpg');"></div>
-            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <a href="images/gallery/delhi-gallery-6.JPG" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/delhi-gallery-6.JPG');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
           </a>
         </div>
-
-        <!-- Gallery Item 5 -->
-        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
-          <a href="images/gallery/slider-2.jpg" data-fancybox="gallery" class="gallery-wrap">
-            <div class="gallery-img" style="background-image: url('images/gallery/slider-2.jpg');"></div>
-            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+        <div class="swiper-slide">
+          <a href="images/gallery/delhi-gallery-7.JPG" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/delhi-gallery-7.JPG');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
           </a>
         </div>
-
-        <!-- Gallery Item 6 -->
-        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
-          <a href="images/gallery/slider-1.jpg" data-fancybox="gallery" class="gallery-wrap">
-            <div class="gallery-img" style="background-image: url('images/gallery/slider-1.jpg');"></div>
-            <div class="gallery-overlay"><span class="fa fa-search-plus"></span></div>
+        <div class="swiper-slide">
+          <a href="images/gallery/delhi-gallery-8.JPG" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/delhi-gallery-8.JPG');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="images/gallery/delhi-gallery-9.jpg" data-fancybox="gallery">
+            <div class="gallery-img" style="background-image: url('images/gallery/delhi-gallery-9.jpg');"></div>
+            <div class="gallery-overlay"><i class="fa fa-search-plus"></i></div>
           </a>
         </div>
       </div>
@@ -652,7 +667,7 @@
   </section>
 
 
-  <section class="section bg-image overlay" style="background-image: url('images/hero_4.jpg');">
+  <section class="section bg-image overlay" style="background-image: url('images/gallery/delhi-gallery-2.JPG');">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
@@ -690,7 +705,7 @@
           <div class="swiper-slide">
             <a href="hotels-in-chamba.html" class="room">
               <figure class="img-wrap">
-                <img src="images/place-of-intrest/rastrapti-bhawan.jpg" alt="Chamba" class="img-fluid mb-3">
+                <img src="images/place-of-intrest/lal-kila.png" alt="Chamba" class="img-fluid mb-3">
               </figure>
               <div class="p-3 text-center room-info">
                 <h4>Lal Quila (18 km)</h4>
@@ -723,7 +738,7 @@
           <div class="swiper-slide">
             <a href="hotels-in-nainital.html" class="room">
               <figure class="img-wrap">
-                <img src="images/place-of-intrest/lal-kila.png" alt="Nainital" class="img-fluid mb-3">
+                <img src="images/place-of-intrest/rastrapti-bhawan.jpg" alt="Nainital" class="img-fluid mb-3">
               </figure>
               <div class="p-3 text-center room-info">
                 <h4>Rashtrapati Bhawan (14 km)</h4>
@@ -882,6 +897,25 @@
           slidesPerView: 3
         }
       },
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+      },
+      breakpoints: {
+        576: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        992: { slidesPerView: 4 }
+      }
     });
   </script>
   <script src="js/main.js"></script>
