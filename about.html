@@ -123,44 +123,124 @@
   <header class="site-header" id="site-header">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/Hotel-Logo-PNG-1024x223.png" alt="Logo" class="img-fluid rounded" style="height:65px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <div class="d-flex justify-content-between align-items-center">
-          <!-- Logo Left -->
-          <a class="navbar-brand" href="index.html">
-            <img src="images/Hotel-Logo-PNG-1024x223.png" alt="Logo" class="img-fluid rounded" style="height:70px;">
-          </a>
-          <!-- Toggler Right -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <!-- Menu -->
-        <div class="collapse navbar-collapse justify-content-end mt-2 mt-lg-0" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav me-3">
             <li class="nav-item px-2 px-lg-3"><a class="nav-link active" href="index.html">Home</a></li>
             <li class="nav-item px-2 px-lg-3"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle px-2 px-lg-3" href="#" role="button"
-                data-bs-toggle="dropdown">Hotels</a>
+
+            <!-- HOTELS MEGA MENU WITH YELLOW LEFT BLOCK -->
+            <li class="nav-item dropdown dropdown-mega">
+              <a class="nav-link dropdown-toggle px-2 px-lg-3" href="#">Hotels</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item px-lg-2" href="hotels-in-delhi.html">Classic Diplomat, New Delhi</a>
-                </li>
-                <li><a class="dropdown-item px-lg-2" href="hotels-in-chamba.html">Classic Hill Top Resort, Chamba</a>
-                </li>
-                <li><a class="dropdown-item px-lg-2" href="hotels-in-haridwar.html">Classic Residency, Haridwar</a></li>
-                <li><a class="dropdown-item px-lg-2" href="hotels-in-nainital.html">Classic The Mall, Nainital</a></li>
+                <div class="container-fluid">
+                  <div class="row g-0">
+                    <!-- Yellow Section -->
+                    <div class="col-md-3 p-4 text-black" style="background-color: #ffc107;">
+                      <div class="h-100 d-flex flex-column justify-content-center">
+                        <h3 style="font-weight: 700; font-size: 20px; text-transform: uppercase;">
+                          Unwind in Timeless Luxury</h3>
+                        <p style="font-size: 14px; font-weight: 500;">Exclusive offers and
+                          special
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Hotel Grid -->
+                    <div class="col-md-9 px-4 py-4">
+                      <div class="mega-grid">
+                        <div class="mega-item">
+                          <img src="images/snapshot/snap-img4.jpg" class="mega-image" alt="Delhi Hotel">
+                          <a href="hotels-in-delhi.html">Classic Diplomat, New Delhi</a>
+                        </div>
+                        <div class="mega-item">
+                          <img src="images/snapshot/snap-img3.jpg" class="mega-image" alt="Chamba Hotel">
+                          <a href="hotels-in-chamba.html">Classic Hill Top Resort, Chamba</a>
+                        </div>
+                        <div class="mega-item">
+                          <img src="images/snapshot/snap-img1.jpg" class="mega-image" alt="Haridwar Hotel">
+                          <a href="hotels-in-haridwar.html">Classic Residency, Haridwar</a>
+                        </div>
+                        <div class="mega-item">
+                          <img src="images/snapshot/snap-img17.jpg" class="mega-image" alt="Nainital Hotel">
+                          <a href="hotels-in-nainital.html">Classic The Mall, Nainital</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </ul>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle px-2 px-lg-3" href="#" role="button"
-                data-bs-toggle="dropdown">Rooms</a>
+
+            <!-- ROOMS MEGA MENU (default style) -->
+            <li class="nav-item dropdown dropdown-mega">
+              <a class="nav-link dropdown-toggle px-2 px-lg-3" href="#">Room</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item px-lg-2" href="room-at-classic-diplomat-delhi.html">New Delhi</a></li>
-                <li><a class="dropdown-item px-lg-2" href="room-at-classic-hill-top-chamba.html">Chamba</a></li>
-                <li><a class="dropdown-item px-lg-2" href="room-at-classic-residency-haridwar.html">Haridwar</a></li>
-                <li><a class="dropdown-item px-lg-2" href="room-at-classic-the-mall-nainital.html">Nainital</a></li>
+                <div class="container-fluid">
+                  <div class="row g-0">
+                    <!-- Yellow Section -->
+                    <div class="col-md-3 p-4 text-black" style="background-color: #ffc107;">
+                      <div class="h-100 d-flex flex-column justify-content-center">
+                        <h3 style="font-weight: 700; font-size: 20px; text-transform: uppercase;">
+                          BOOK DIRECT OFFERS</h3>
+                        <p style="font-size: 14px; font-weight: 500;">Exclusive offers and
+                          special
+                        </p>
+
+                      </div>
+                    </div>
+
+                    <!-- Hotel Grid -->
+                    <div class="col-md-9 px-4 py-4">
+                      <div class="mega-grid">
+                        <div class="mega-item">
+                          <img src="images/room-img/deluxe-room.jpeg" class="mega-image" alt="Delhi Hotel">
+                          <a href="room-at-classic-diplomat-delhi.html">Classic Diplomat, New
+                            Delhi</a>
+                          <a href="reservation.html">-Suite Room</a>
+                          <a href="reservation.html">-Family Suite Room</a>
+                          <a href="reservation.html">-Deluxe Premium Room</a>
+
+                        </div>
+                        <div class="mega-item">
+                          <img src="images/room-img/chmba-primium.jpeg" class="mega-image" alt="Chamba Hotel">
+                          <a href="room-at-classic-hill-top-chamba.html">Classic Hill Top
+                            Resort, Chamba</a>
+                          <a href="reservation.html">-Deluxe Room</a>
+                          <a href="reservation.html">-Premium Room</a>
+
+                        </div>
+                        <div class="mega-item">
+                          <img src="images/room-img/hari-primu-img-2.JPG" class="mega-image" alt="Haridwar Hotel">
+                          <a href="room-at-classic-residency-haridwar.html">Classic Residency,
+                            Haridwar</a>
+                          <a href="reservation.html">-Premium Room</a>
+                          <a href="reservation.html">-Suite Room</a>
+                          <a href="reservation.html">-Deluxe Premium Room</a>
+                          <a href="reservation.html">-Executive Suit Room</a>
+                        </div>
+                        <div class="mega-item">
+                          <img src="images/room-img/nani-pre-img-1.jpg" class="mega-image" alt="Nainital Hotel">
+                          <a href="room-at-classic-the-mall-nainital.html">Classic The Mall,
+                            Nainital</a>
+                          <a href="reservation.html">-Deluxe Room</a>
+                          <a href="reservation.html">-Premium Room</a>
+                          <a href="reservation.html">-Classic Suit Room</a>
+                          <a href="reservation.html">-Family Room</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </ul>
             </li>
+
             <li class="nav-item px-2 px-lg-3"><a class="nav-link" href="events.html">Events</a></li>
             <li class="nav-item px-2 px-lg-3"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
@@ -464,8 +544,8 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <div class="timeline-item" date-is='2019' data-aos="fade">
-            <h3>1995 — Foundation Years</h3>
+          <div class="timeline-item" date-is='1995' data-aos="fade">
+            <h3>Foundation Years</h3>
             <h4>Classic Residency, Haridwar</h4>
             <p>Classic Hotels began its journey with the launch of Classic Residency in Haridwar, marking its entry into
               the
@@ -475,8 +555,8 @@
               Ki Pauri,
               making it a preferred choice for spiritual travelers.</p>
           </div>
-          <div class="timeline-item" date-is='2019' data-aos="fade">
-            <h3>1996 — Strengthening Hill Presence</h3>
+          <div class="timeline-item" date-is='1996' data-aos="fade">
+            <h3>Strengthening Hill Presence</h3>
             <h4>Classic The Mall, Nainital</h4>
             <p>Continuing its growth, Classic Hotels acquired and rebranded a heritage property on Nainital’s iconic
               Mall Road. Classic
@@ -484,8 +564,8 @@
               its old-world
               charm.</p>
           </div>
-          <div class="timeline-item" date-is='2019' data-aos="fade">
-            <h3>2000 — Expansion to Hills</h3>
+          <div class="timeline-item" date-is='2000' data-aos="fade">
+            <h3>Expansion to Hills</h3>
             <h4>Classic Hill Top Resort, Chamba</h4>
             <p>Venturing deeper into Uttarakhand’s serene landscapes, Classic Hotels launched Classic Hill Top Resort in
               Chamba.
@@ -495,8 +575,8 @@
               colonial-style charm
               and serene surroundings make it a perfect hill getaway.</p>
           </div>
-          <div class="timeline-item" date-is='2019' data-aos="fade">
-            <h3>2011 — Entry into Delhi NCR</h3>
+          <div class="timeline-item" date-is='2011' data-aos="fade">
+            <h3>Entry into Delhi NCR</h3>
             <h4>Hotel Diplomat, Delhi</h4>
             <p>Marking its foray into the capital, Classic Hotels took over and rebranded Hotel Diplomat in New Delhi’s
               prestigious
@@ -593,6 +673,7 @@
   <script src="js/aos.js"></script>
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/main.js"></script>
   <script>
     window.addEventListener('scroll', function () {
       var logo = document.getElementById('logo');
@@ -640,6 +721,58 @@
         // Change back to original white logo
         logo.src = 'images/Hotel-Logo-PNG-1024x223.png';
       }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggles = document.querySelectorAll(".dropdown-mega > .dropdown-toggle");
+
+      toggles.forEach(toggle => {
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          const dropdownMenu = this.nextElementSibling;
+
+          // Close all other open menus
+          document.querySelectorAll(".dropdown-mega .dropdown-menu").forEach(menu => {
+            if (menu !== dropdownMenu) {
+              menu.style.display = "none";
+            }
+          });
+
+          // Toggle current menu
+          dropdownMenu.style.display =
+            dropdownMenu.style.display === "block" ? "none" : "block";
+        });
+      });
+
+      // Optional: Close the mega menu when clicking outside
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".dropdown-mega")) {
+          document.querySelectorAll(".dropdown-mega .dropdown-menu").forEach(menu => {
+            menu.style.display = "none";
+          });
+        }
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.getElementById("mobile-menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+
+      toggleBtn.addEventListener("click", function () {
+        menu.style.display = (menu.style.display === "flex" ? "none" : "flex");
+      });
+
+      const submenuLinks = document.querySelectorAll(".has-submenu > a");
+
+      submenuLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle("open");
+        });
+      });
     });
   </script>
   <script src="js/main.js"></script>
